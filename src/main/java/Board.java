@@ -9,6 +9,12 @@ public class Board {
         this.grid = grid;
     }
 
-
-
+    @Override
+    public String toString() {
+        StringBuilder boardLayout = new StringBuilder();
+        boardLayout.append(freeCells.toString()).append("\n").append(home.toString());
+        boardLayout.append("\n");
+        boardLayout.append(grid.toString());
+        return boardLayout.toString();
+    }
 }
